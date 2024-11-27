@@ -1,0 +1,183 @@
+:root {
+    --primary-color: #1e3a5f;
+    --accent-color: #ff6f61;
+    --background-color: #f7f9fc;
+    --card-color: rgba(255, 255, 255, 0.85);
+    --text-color: #2a7db1;
+    --icon-color: #ff5733;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-color);
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: url('./photos/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.app-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+#cityInput {
+    width: 60%;
+    padding: 15px;
+    font-size: 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    background-color: var(--card-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Playfair Display', serif;
+}
+
+#searchBtn {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#searchBtn:hover {
+    background-color: #e55a4e;
+    transform: scale(1.05);
+}
+
+.forecast-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.day-forecast {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    font-size: 1.3rem;
+}
+
+.day-forecast h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.hour-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.hour-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(30, 58, 95, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    font-size: 1.4rem;
+}
+
+#forecastContainer {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.hour-card:hover {
+    transform: translateY(-10px);
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.hour-card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.hour-card img {
+    max-width: 100px;
+    margin: 10px 0;
+}
+
+.hour-details {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.hour-details .detail {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.hour-details .detail i {
+    font-size: 2rem;
+    color: var(--icon-color);
+}
+
+.forecast-date {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
